@@ -1858,6 +1858,38 @@
       margin-top: 0;
     }
 
+      .topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-link.secondary {
+  color: #5c5f86;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 10px 26px rgba(70, 72, 140, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.topbar-link.secondary:hover {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 14px 32px rgba(70, 72, 140, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 720px) {
+  .topbar-actions {
+    gap: 6px;
+  }
+
+  .topbar-actions .topbar-link {
+    padding: 9px 10px;
+    font-size: 0.75rem;
+  }
+}
   </style>
 </head>
 
@@ -1874,7 +1906,20 @@
           <span>The Special Program</span>
         </div>
       </div>
-      <a class="topbar-link" href="#competitions">ดูรายการแข่งขัน</a>
+      <div class="topbar-actions">
+  <a
+    class="topbar-link secondary"
+    href="https://drive.google.com/drive/folders/1DA9XOeQGZofbxKjErsCLd7Qd--ZbfnJ9?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ดูเกณฑ์การแข่งขัน
+  </a>
+
+  <a class="topbar-link" href="#competitions">
+    ดูรายการแข่งขัน
+  </a>
+</div>
     </nav>
 
     <section class="hero glass">
